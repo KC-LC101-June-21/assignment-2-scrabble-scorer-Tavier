@@ -122,6 +122,10 @@ function transform(oldPointStructure){
   }
 
   for(let i = 0; i < groupedLettersArray.length; i++){
+    groupedLettersArray[i] = groupedLettersArray[i].join(',').toLowerCase().split(',')
+  }
+  
+  for(let i = 0; i < groupedLettersArray.length; i++){
     for(let j = 0; j < groupedLettersArray[i].length; j++){
       newObj[groupedLettersArray[i][j]] = possiblePoints[i]
     }
